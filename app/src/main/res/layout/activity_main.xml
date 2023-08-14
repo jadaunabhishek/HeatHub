@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainlinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/anim_top_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"></LinearLayout>
+
+    <TextView
+        android:id="@+id/apptextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/abril_fatface"
+        android:padding="10dp"
+        android:text="HeatHub"
+        android:textAlignment="center"
+        android:textColor="#DAFFFB"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logincardview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="30dp"
+        app:cardElevation="20dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apptextview" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutmain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Convert Temperature"
+                android:padding="10dp"
+
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/selectDoctor"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp"
+                    android:text="From : "
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/fromTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/select"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp"
+                    android:text="To : "
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/toTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/chooseTemp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/editbutton_bg"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:textSize="18dp"
+                android:hint="Enter"
+                android:textAlignment="center"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.535" />
+
+            <TextView
+                android:id="@+id/resultTemp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/editbutton_bg"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:textSize="18dp"
+                android:hint="32"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.535" />
+
+
+            <Button
+                android:id="@+id/convertTemp"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="Convert"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
